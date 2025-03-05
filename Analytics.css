@@ -132,11 +132,9 @@ body {
 .features-description {
   font-size: 16px;
   color: #8794ba;
-  margin: 0 auto 50px;
   font-weight: 400;
   font-size: 25px;
   line-height: 37px;
-  white-space: nowrap;
   padding: 0px;
   text-align: center;
 }
@@ -166,13 +164,11 @@ body {
   font-weight: 400;
   line-height: 25px;
 }
-
 .content1 h2 {
   font-size: 47px;
   font-weight: bold;
   color: #333;
 }
-
 .content1 p {
   font-size: 20px;
   color: #8794ba;
@@ -181,7 +177,6 @@ body {
   line-height: 30px;
   font-weight: 500;
 }
-
 .container1 {
   display: flex;
   flex-direction: row;
@@ -192,7 +187,6 @@ body {
   gap: 30px;
   margin: auto;
 }
-
 .content1 {
   flex: 1;
   text-align: left;
@@ -202,7 +196,6 @@ body {
   height: 33rem;
   width: 46rem;
 }
-
 .pricing-section {
   align-items: center;
   background-color: #f4f5fa;
@@ -218,7 +211,6 @@ body {
   background-color: #f4f5fa;
   height: 800px;
 }
-
 .pricing-section h1 {
   font-size: 3rem;
   margin-bottom: 35px;
@@ -230,7 +222,6 @@ body {
   line-height: 1.7rem;
   margin-bottom: 4rem;
 }
-
 .pricing-container {
   display: flex;
   justify-content: center;
@@ -250,14 +241,12 @@ footer {
 .footer-text img {
   vertical-align: middle;
 }
-
 .footer-links a {
   color: #b0b3c4;
   text-decoration: none;
   margin: 0 15px;
   font-size: 1rem;
 }
-
 .footer-links a:hover {
   color: white;
 }
@@ -348,9 +337,6 @@ footer {
     width: 100%;
     height: auto;
   }
-  .pricing-section h1 {
-    color: #0d1b3d;
-  }
 }
 
 @media (max-width: 768px) {
@@ -379,10 +365,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .pricing-section h1 {
-    color: #0d1b3d;
-  }
-  .footer-links a {
+    .footer-links a {
     font-size: 0.9rem;
   }
 }
@@ -441,10 +424,7 @@ footer {
   .pricing-section {
     padding: 100px 0px;
   }
-  .pricing-section h1 {
-    color: #0d1b3d;
-  }
-  .footer {
+ .footer {
     flex-direction: column;
     text-align: center;
   }
