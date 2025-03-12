@@ -7,6 +7,7 @@
 body {
     background: #f7fdfc;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 header{
     margin: 0px 7vw 0px 7vw;
@@ -32,7 +33,6 @@ header{
     width: 500px;
     margin-top: 14px;
 }
-
 .search-box i {
     color: #a0a0a0;
     margin-right: 8px;
@@ -46,7 +46,6 @@ header{
     font-size: 22px;
     color: #7d7d7d;
 }
-
 .explore-btn {
     background: #F2FFFB;
     color: #20B486;
@@ -59,7 +58,6 @@ header{
     display: flex;
     align-items: center;
 }
-
 .explore-btn i {
     margin-left: 5px;
     font-size: 12px;
@@ -168,18 +166,14 @@ header{
 .circle-bg::before {
     content: "";
             position: absolute;
-            width: 600px; /* Slightly larger than image */
+            width: 600px; 
             height: 600px;
             border-radius: 50%;
-            border: 1px solid #20B486; /* Green border */
-            /* right: 0.1px; */
+            border: 1px solid #20B486; 
             bottom:5%;
             transform: translateX(-55%);
-            z-index: 1; /* Places it behind image */
-            opacity: 0.8; /* Slight transparency */
-
-            /* Animation */
-            animation: moveBorder 2s infinite ease-in-out;
+            z-index: 1;
+            opacity: 0.8; 
 }
 
 .Green-circle{
@@ -209,7 +203,12 @@ header{
     top: 650px;
     left: 1100px;
     z-index: 1;
-    /* box-shadow: 0 0 10px rgba(32, 180, 134, 0.5); */
+}
+.circle-image{
+    position:absolute;
+    bottom: -120px;
+    right:10px;
+    z-index: -1;
 }
 
 .stat-card {
@@ -231,6 +230,7 @@ header{
 .collaborations {
     text-align: center;
     padding: 20px;
+   
 }
 .collaborations img {
     margin: 15px;
@@ -239,27 +239,6 @@ header{
 .collaboration{
     height:15vh;
     width: 10vw;
-}
-@media (max-width: 768px) {
-    body {
-        padding: 0 20px;
-    }
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        min-height: auto;
-    }
-    .hero-image img {
-        width: 250px;
-    }
-    .stat-card {
-        position: relative;
-        display: inline-block;
-        margin: 10px;
-    }
-    .nav-links {
-        display: none;
-    }
 }
 .features-container {
     display: flex;
@@ -281,17 +260,180 @@ header{
     height:40px;
     width: 40px;
 }
-
 .feature span {
     font-size: 22px;
-    /* font-weight: bold; */
     color: #4a4a4a;
 }
+
+@media (max-width: 1024px) {
+   
+    .hero-buttons button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    .features-container {
+        width: auto;
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 70px;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-buttons button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    .features-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .feature img {
+        height: 30px;
+        width: 30px;
+    }
+    .feature span {
+        font-size: 18px;
+    }
+    .hero-image img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 400px;
+    }
+    .nav-links{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background-size: contain;
+        background-image: none;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .hero-image .circle-bg {
+        width: 400px;
+        height: 400px;
+    }
+
+    #student {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .circle-image {
+        bottom: -60px;
+        right: 10px;
+    }
+    .circle-bg::before{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image .circle-bg {
+        width: 300px;
+        height: 300px;
+    }
+
+    #student {
+        max-width: 300px;
+        margin-left: 100px;
+    }
+    .circle-bg::before{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+    .hero-text{
+       align-items: center;
+    }
+
+    .hero-image .circle-bg {
+        width: 250px;
+        height: 250px;
+    }
+
+    #student {
+        max-width: 250px;
+        margin-left: 50px;
+    }
+    .circle-bg::before{
+        display: none;
+    }
+}
+
 .services {
-    
     align-items: center;
     justify-content: center;
-  
     margin-top: 50px;
 }
 .services h2{
@@ -305,6 +447,7 @@ header{
     color:#20B486;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 20px;
     
 }
 .service-cards {
@@ -346,7 +489,6 @@ header{
 }
 .card .learn-more {
     color: #20B486;
-    /* font-weight: bold; */
     text-decoration: none;
     display: block;
     margin-top: 10px;
@@ -425,11 +567,9 @@ header{
 .course-category {
     color: #20B486;
     font-size: 0.6rem;
-    /* font-weight: bold; */
 }
 .course-title {
     font-size: 1.5rem;
-    /* font-weight: bold; */
     margin:20px 0;
 }
 .course-description {
@@ -519,7 +659,6 @@ header{
     margin-bottom: 20px;
 }
 .tutor-name {
-    /* font-weight: bold; */
     font-size: 1.2rem;
     color: #222;
 }
@@ -545,6 +684,9 @@ header{
     font-size: 1.5rem;
     color: #666;
     cursor: pointer;
+}
+.icons-bottom{
+    margin-top: 40px;
 }
 @media (max-width: 768px) {
     .tutor-heading {
