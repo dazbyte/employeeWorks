@@ -6,9 +6,10 @@
     <title>Varun Motors Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .navbar {
-            background-color: rgb(35, 35, 68);
+            background-color: rgb(0, 0, 0);
         }
         .navbar-brand img {
             height: 60px;
@@ -21,85 +22,314 @@
         .navbar-nav .nav-link:hover {
             color: paleturquoise;
         }
+        
+        .carousel-inner, .carousel-item {
+            background-color: black;
+        }
         .carousel-item {
             height: 800px;
         }
-        #carouselExample {
-            background-color: rgb(35, 35, 68);
-        }
         .carousel-item img {
             width: 100%;
-            height: 950px;
-            object-fit: contain;
-            transform: translateY(-20px);
+            height: 100%;
+            object-fit: cover;
         }
-    
+        
+        .bg {
+            background-color: black;
+        }
+        /* .feature-section {
+            margin-top: -60px; 
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: 10;
+            position: absolute; width: 100%; left: 50%; transform: translateX(-50%); 
+        }
+        .feature-box {
+            text-align: center;
+            background: #000000;
+            color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 300px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .feature-box i {
+            font-size: 50px; 
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+        .feature-box h5 {
+            font-weight: bold;
+        }
+        .underline {
+            width: 30px;
+            height: 3px;
+            background-color: red;
+            margin: 10px auto 0; 
+        }*/
+        .car-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .car-container {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .section {
+            position: relative;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .section-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .section-content {
+            position: relative;
+            z-index: 2;
+        }
+        .btn-explore {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light border-bottom">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="../Assets/VM-images/pngtree-mv-vm-letter-vector-logo-image_332121.jpg" alt="Varun Motors">
-        </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon bg-light"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="newCarsDropdown" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">New Cars</a>
-                    <ul class="dropdown-menu" aria-labelledby="newCarsDropdown">
-                        <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
-                        <li><a class="dropdown-item" href="#">Sedans</a></li>
-                        <li><a class="dropdown-item" href="#">SUVs</a></li>
+    <section class="bg">
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../Assets/VM-images/pngtree-mv-vm-letter-vector-logo-image_332121.jpg" alt="Varun Motors">
+                </a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-light"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="newCarsDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">New Cars</a>
+                            <ul class="dropdown-menu" aria-labelledby="newCarsDropdown">
+                                <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
+                                <li><a class="dropdown-item" href="#">Sedans</a></li>
+                                <li><a class="dropdown-item" href="#">SUVs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">True Value</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Outlets</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">Our Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#">Car Service</a></li>
+                                <li><a class="dropdown-item" href="#">Insurance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
                     </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">True Value</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Outlets</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">Our Services</a>
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="#">Car Service</a></li>
-                        <li><a class="dropdown-item" href="#">Insurance</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
-            </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Assets/VM-images/nexa-web.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Assets/VM-images/Screenshot 2025-03-14 185451.png" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Assets/VM-images/1677567069.webp" class="d-block w-100" alt="Image 3">
+                </div>
+            </div>
+        
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+<!-- <div class="container feature-section">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <i class="bi bi-car-front"></i>
+                <h5>Largest Dealership of Cars</h5>
+                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                <div class="underline"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box p-5">
+                <i class="bi bi-cash-coin"></i>
+                <h5>We Offer Lower Car Prices</h5>
+                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                <div class="underline"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <i class="bi bi-tools"></i>
+                <h5>Multipoint Safety Checks</h5>
+                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                <div class="underline"></div>
+            </div>
         </div>
     </div>
-</nav>
+</div> -->
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../Assets/VM-images/car8.jpg" class="d-block w-100" alt="Image 1">
-        </div>
-        <div class="carousel-item">
-            <img src="../Assets/VM-images/car5.avif" class="d-block w-100" alt="Image 2">
-        </div>
-        <div class="carousel-item">
-            <img src="../Assets/VM-images/car9.jpg" class="d-block w-100" alt="Image 3">
-        </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+<div class="container text-center mt-5 text-light">
+    <h2>DISCOVER OUR <strong>RANGE</strong></h2>
 </div>
+
+<div class="container-fluid mt-4 text-warning">
+    <h3 class="text-center mb-4">ARENA</h3>
+    <div class="row text-secondary">
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/Aston Martin DBS Superleggera.webp" alt="S-PRESSO" class="car-img">
+            <p>ERTIGA</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/images (1).jpg" alt="S-PRESSO" class="car-img">
+            <p>S-PRESSO</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/r0_0_800_533_w800_h533_fmax.jpg" alt="XL6" class="car-img">
+            <p>XL6</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/2-1.webp" alt="CELERIO" class="car-img">
+            <p>CELERIO</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/dzire-2024-exterior-right-front-three-quarter-3.webp" alt="BREZZA" class="car-img">
+            <p>e VITARA</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/black-car.webp" alt="BREZZA" class="car-img">
+            <p>BREZZA</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-4">
+    <h3 class="text-center text-warning mb-4">NEXA</h3>
+    <div class="row text-secondary">
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/white-car.webp" alt="e VITARA" class="car-img">
+            <p>e VITARA</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/Best-Stylish-Cars-in-India.webp" alt="BREZZA" class="car-img">
+            <p>BREZZA</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/001c9720-500.webp" alt="" class="car-img">
+            <p>BALENO</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/pexels-mikebirdy-170811.jpg" alt="ERTIGA" class="car-img">
+            <p>ERTIGA</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/the-worst-car-name-in-the-business-might-soon-be-retired-v0-DqUAhRJOqpsIMPmrz4FniFBT16DTIhcpgz2c1yEGfoI.webp" alt="CIAZ" class="car-img">
+            <p>CIAZ</p>
+        </div>
+        <div class="col-md-2 car-container">
+            <img src="../Assets/VM-images/images.jpg" alt="BREZZA" class="car-img">
+            <p>BREZZA</p>
+        </div>
+        
+    </div>
+</div>
+</section>
+<div class="container-fluid">
+    <div class="row">
+        <!-- More From Us -->
+        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?teamwork');">
+            <div class="section-overlay"></div>
+            <div class="section-content">
+                <h2>MORE FROM US</h2>
+                <p>Driving schools to insurance of your car - Maruti Suzuki takes care of everything</p>
+                <button class="btn btn-explore">EXPLORE</button>
+            </div>
+        </div>
+
+        <!-- Channels -->
+        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?car');">
+            <div class="section-overlay"></div>
+            <div class="section-content">
+                <h2>CHANNELS</h2>
+                <p>Buy or sell – always get the very best with Maruti Suzuki</p>
+                <button class="btn btn-explore">EXPLORE</button>
+            </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?office');">
+            <div class="section-overlay"></div>
+            <div class="section-content">
+                <h2>CORPORATE</h2>
+                <p>Find out what drives the company that drives India</p>
+                <button class="btn btn-explore">EXPLORE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <!-- Accessories -->
+        <div class="col-md-4 section" style="background: white; color: black; height: 200px;">
+            <h3>SCROLL. SELECT. ORDER.</h3>
+            <p>Enhance your car from the comfort of your home</p>
+            <button class="btn btn-explore">Know More</button>
+        </div>
+
+        <!-- Fuel Joy -->
+        <div class="col-md-4 section" style="background: blue; color: white; height: 200px;">
+            <h3>Feel the joy of getting more!</h3>
+            <p>Locate & navigate to your nearest Petrol or CNG station now.</p>
+            <button class="btn btn-explore">Know More</button>
+        </div>
+
+        <!-- Car Service -->
+        <div class="col-md-4 section" style="background: navy; color: white; height: 200px;">
+            <h3>LOOK AFTER YOUR CAR WITH EASE</h3>
+            <p>Book Service with ease, Easy Payments, Ease at Every Turn</p>
+            <button class="btn btn-explore">Know More</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
