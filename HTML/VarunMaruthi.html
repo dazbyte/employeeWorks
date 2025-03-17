@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .navbar {
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(17, 55, 87);
         }
         .navbar-brand img {
             height: 60px;
@@ -22,49 +22,69 @@
         .navbar-nav .nav-link:hover {
             color: paleturquoise;
         }
-        
-        .carousel-inner, .carousel-item {
+        .hero-container{
+            background-image:url('../Assets/VM-images/white-abstract-background-modern-circle-260nw-2474885867.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .hero-section {
+            background-size: cover;
+            padding: 50px;
+        }
+        .stats-box {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+        }
+        .divider {
+            border-top: 2px solid black;
+            margin: 10px 0;
+        }
+        #carousel-inner, #carousel-item {
             background-color: black;
         }
-        .carousel-item {
+        #carousel-item {
             height: 800px;
         }
-        .carousel-item img {
+        #carousel-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
-        .bg {
-            background-color: black;
-        }
-        /* .feature-section {
-            margin-top: -60px; 
-            position: absolute;
-            width: 100%;
-            left: 0;
+        .car-img:hover {
+            transform: scale(1.5);
             z-index: 10;
-            position: absolute; width: 100%; left: 50%; transform: translateX(-50%); 
+            position: relative;
         }
         .feature-box {
             text-align: center;
-            background: #000000;
+            background: rgb(17, 55, 87);
             color: aliceblue;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 5px rgba(156, 151, 151, 0.5);
             overflow: hidden;
-            height: 300px; 
+            height: 400px; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 10px;
+            gap: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-box:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+            z-index: 10;
+            position: relative;
         }
         .feature-box i {
-            font-size: 50px; 
+            font-size: 80px; 
             color: #dc3545;
             margin-bottom: 20px;
         }
+       
         .feature-box h5 {
             font-weight: bold;
         }
@@ -73,7 +93,7 @@
             height: 3px;
             background-color: red;
             margin: 10px auto 0; 
-        }*/
+        }
         .car-img {
             width: 100%;
             height: auto;
@@ -84,35 +104,58 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
-        .section {
-            position: relative;
-            color: white;
+        .testimonal {
+            background: url('../Assets/VM-images/black-car.webp') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
-        .section-overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .section-content {
+        .testimonial-container {
             position: relative;
-            z-index: 2;
+            max-width: 2500px;
+            margin: auto;
+            padding: 90px 20px;
+            opacity: 0.7;
+           
         }
-        .btn-explore {
-            background: red;
+       .carousel-item1, .carousel-item2, .crousel-item3 {
+            transition: transform 0.6s ease-in-out;
+            text-align: center;
+            padding-top: 20px;
+            max-height: 300px;
+        }
+        
+        .testimonial-card {
+            padding: 90px 20vw;
+            border-radius: 30px;
+            text-align: center;
+           
+        }
+        .carousel-item .testimonial-card {
+            background: rgba(63, 63, 173, 0.3);
+            color: rgb(255, 255, 255);
+        }
+        .footer {
+            background: linear-gradient(to right, #0a3876, #0d1d38);
             color: white;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        .newsletter input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
             border: none;
-            padding: 10px 20px;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -158,14 +201,14 @@
         </nav>
         
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+            <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active" id="carosuel-item">
                     <img src="../Assets/VM-images/nexa-web.jpg" class="d-block w-100" alt="Image 1">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="carousel-item">
                     <img src="../Assets/VM-images/Screenshot 2025-03-14 185451.png" class="d-block w-100" alt="Image 2">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="carousel-item">
                     <img src="../Assets/VM-images/1677567069.webp" class="d-block w-100" alt="Image 3">
                 </div>
             </div>
@@ -179,37 +222,45 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-<!-- <div class="container feature-section">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <div class="feature-box">
-                <i class="bi bi-car-front"></i>
-                <h5>Largest Dealership of Cars</h5>
-                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
-                <div class="underline"></div>
+
+       <section class="container-fluid hero-container">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">ABOUT US</h2>
+            <div class="hero-section row align-items-center">
+                <div class="col-md-6 text-dark">
+                    <h2>Welcome To Varun Maruti - India's <span class="text-primary">No.1</span> Maruti Dealer</h2>
+                    <p>Varun Maruti is India's leading automobile dealership company built on strong fundamentals and patronage of over 20 million satisfied customers. Founded in 1992 and headquartered in Visakhapatnam, Varun Motors Pvt. Ltd. has an expansive network across Karnataka, Telangana, and Andhra Pradesh.</p>
+                    <p><strong>We don’t sell. We Advise.</strong></p>
+                    <p class="text-primary">V Varun Dev</p>
+                    <p><small>Managing Director, Varun Maruthi Pvt. Ltd.</small></p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="../Assets/VM-images/pngimg.com - bmw_PNG99560.png" class="img-fluid" alt="Car Image">
+                </div>
+            </div>
+            <div class="row text-center mt-4 text-dark">
+                <div class="col-md-3">
+                    <div class="stats-box">160</div>
+                    <p>Showrooms</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-box">80</div>
+                    <p>Workshops</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-box">240</div>
+                    <p>Touchpoints</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-box">1,000,000</div>
+                    <p>Covered Area In Sq.Ft</p>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="feature-box p-5">
-                <i class="bi bi-cash-coin"></i>
-                <h5>We Offer Lower Car Prices</h5>
-                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
-                <div class="underline"></div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="feature-box">
-                <i class="bi bi-tools"></i>
-                <h5>Multipoint Safety Checks</h5>
-                <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
-                <div class="underline"></div>
-            </div>
-        </div>
-    </div>
-</div> -->
+       </section>
 
 <div class="container text-center mt-5 text-light">
-    <h2>DISCOVER OUR <strong>RANGE</strong></h2>
+    <h2 class="text-dark">DISCOVER OUR RANGE</h2>
 </div>
 
 <div class="container-fluid mt-4 text-warning">
@@ -273,63 +324,150 @@
     </div>
 </div>
 </section>
-<div class="container-fluid">
-    <div class="row">
-        <!-- More From Us -->
-        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?teamwork');">
-            <div class="section-overlay"></div>
-            <div class="section-content">
-                <h2>MORE FROM US</h2>
-                <p>Driving schools to insurance of your car - Maruti Suzuki takes care of everything</p>
-                <button class="btn btn-explore">EXPLORE</button>
+ <section>
+    <div class="container feature-section mt-5">
+        <h2 class="text-center m-5">OUR SERVICES</h2>
+        <div class="container-fluid row row1">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="bi bi-car-front"></i>
+                    <h5>Largest Dealership of Cars</h5>
+                    <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                    <div class="underline"></div>
+                </div>
             </div>
-        </div>
-
-        <!-- Channels -->
-        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?car');">
-            <div class="section-overlay"></div>
-            <div class="section-content">
-                <h2>CHANNELS</h2>
-                <p>Buy or sell – always get the very best with Maruti Suzuki</p>
-                <button class="btn btn-explore">EXPLORE</button>
+            <div class="col-md-4">
+                <div class="feature-box p-5">
+                    <i class="bi bi-cash-coin"></i>
+                    <h5>We Offer Lower Car Prices</h5>
+                    <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                    <div class="underline"></div>
+                </div>
             </div>
-        </div>
-
-        <!-- Corporate -->
-        <div class="col-md-4 section" style="background-image: url('https://source.unsplash.com/random/800x600/?office');">
-            <div class="section-overlay"></div>
-            <div class="section-content">
-                <h2>CORPORATE</h2>
-                <p>Find out what drives the company that drives India</p>
-                <button class="btn btn-explore">EXPLORE</button>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="bi bi-tools"></i>
+                    <h5>Multipoint Safety Checks</h5>
+                    <p>MotorLand is nisi aliquip ex consequat duis velit esse cillum dolore fugiat nulla pariatur.</p>
+                    <div class="underline"></div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="row mt-3">
-        <!-- Accessories -->
-        <div class="col-md-4 section" style="background: white; color: black; height: 200px;">
-            <h3>SCROLL. SELECT. ORDER.</h3>
-            <p>Enhance your car from the comfort of your home</p>
-            <button class="btn btn-explore">Know More</button>
+</section> 
+   <section class="testimonal">
+    <div class="testimonial-container">
+        <h2 class="text-center text-white">TESTIMONALS</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner carousel">
+                <div class="carousel-item active carousel-item1">
+                    <div class="testimonial-card">
+                        <p> Great buying experience. Also, they under promised and over delivered on delivery, discount and other commitments. Mr. Veerendra was my sales contact and provided excellent service. Highly recommended if you are planning for a Maruti Suzuki car.</p>
+                        <h4>- Chetan Poojary</h4>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item2">
+                    <div class="testimonial-card">
+                        <p>Overall experience is excellent. The executives and associates were friendly and easy to connect in the over all process of purchasing car. Arun was my Sales executive, he is supportive and showed his professionalism in each and every note. Happy to be part with NEXA.</p>
+                        <h4>- Prakash Satyanarayan</h4>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item3">
+                    <div class="testimonial-card">
+                        <p>New showroom, integrated service as well.  Claims best in class service infrastructure.  Showroom staff, cordial & friendly.</p>
+                        <h4>- Ramya</h4>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-
-        <!-- Fuel Joy -->
-        <div class="col-md-4 section" style="background: blue; color: white; height: 200px;">
-            <h3>Feel the joy of getting more!</h3>
-            <p>Locate & navigate to your nearest Petrol or CNG station now.</p>
-            <button class="btn btn-explore">Know More</button>
-        </div>
-
-        <!-- Car Service -->
-        <div class="col-md-4 section" style="background: navy; color: white; height: 200px;">
-            <h3>LOOK AFTER YOUR CAR WITH EASE</h3>
-            <p>Book Service with ease, Easy Payments, Ease at Every Turn</p>
-            <button class="btn btn-explore">Know More</button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
         </div>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   </section>
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Insurance Renewal</a></li>
+                    <li><a href="#">Driving School</a></li>
+                    <li><a href="#">Car Subscription</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Hatchback</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Alto K10</a></li>
+                    <li><a href="#">Wagon R</a></li>
+                    <li><a href="#">Celerio</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">Ignis</a></li>
+                    <li><a href="#">Baleno</a></li>
+                </ul>
+                <h5>Sedan</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Ciaz</a></li>
+                    <li><a href="#">Dzire</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>MUV & SUV</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Brezza</a></li>
+                    <li><a href="#">S-Presso</a></li>
+                    <li><a href="#">Ertiga</a></li>
+                    <li><a href="#">XL6</a></li>
+                    <li><a href="#">Jimny</a></li>
+                    <li><a href="#">FRONX</a></li>
+                </ul>
+                <h5>Commercial</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Super Carry</a></li>
+                    <li><a href="#">EECO Cargo</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+                <h5 class="mt-3">Subscribe Our Newsletter</h5>
+                <div class="newsletter">
+                    <input type="email" placeholder="Enter your Email">
+                    <button class="btn btn-primary btn-sm mt-2">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>© Copyright Varun Maruti Pvt Ltd 2025</p>
+            <p>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms And Conditions</a> |
+                <a href="#">Disclaimer</a>
+            </p>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
