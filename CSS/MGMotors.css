@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(17, 55, 87);
+    background-color: rgb(255, 255, 255);
 }
 .navbar-brand img {
     height: 60px;
@@ -7,7 +7,8 @@
 }
 .navbar-nav .nav-link {
     font-weight: 600;
-    color: rgb(234, 237, 245);
+    color: #0a3876;
+    font-size: 20px;
 }
 .navbar-nav .nav-link:hover {
     color: paleturquoise;
@@ -49,7 +50,7 @@
 }
 .feature-box {
     text-align: center;
-    background: rgb(17, 55, 87);
+    background: #0a3876;
     color: aliceblue;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(156, 151, 151, 0.5);
@@ -122,7 +123,7 @@
    
 }
 .carousel-item .testimonial-card {
-    background: rgba(63, 63, 173, 0.3);
+    background: rgba(72, 112, 187, 0.3);
     color: rgb(255, 255, 255);
 }
 .footer {
@@ -146,4 +147,50 @@
     padding: 5px;
     border-radius: 5px;
     border: none;
+}
+.floating-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #004aad;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menu-container {
+    position: fixed;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    background: rgba(0, 74, 173, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    visibility: hidden;
+}
+.menu-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+.menu-container a:hover {
+    background: rgba(255, 255, 255, 0.4);
 }

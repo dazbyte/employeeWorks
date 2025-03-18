@@ -1,0 +1,232 @@
+.body{
+    font-family: sans-serif;
+}
+.navbar {
+    background-color: rgb(255, 255, 255);
+}
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #0a3876;
+    font-size: 20px;
+}
+.navbar-nav .nav-link:hover {
+    color: paleturquoise;
+}
+.banner {
+    width: 100%;
+    height: auto;
+}
+.text-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.timeline-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.timeline-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    background-color: #ccc;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.container-box {
+    position: relative;
+    background: white;
+    width: 48%;
+    padding: 28px;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404040;
+    -webkit-font-smoothing: antialiased;
+}
+.container-box:hover {
+    background: #1358b3;
+    color: white;
+}
+.left {
+    left: 0.5%;
+}
+.right {
+    left: 51%;
+}
+.number {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #275aa5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    top: 20px;
+    font-size: 20px;
+}
+.left .number {
+    right: -40px;
+}
+.right .number {
+    left: -40px;
+}
+.fav-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.fav-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-item input {
+    display: none;
+}
+
+.faq-item label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.faq-item label:hover {
+    background-color: #1a72ca;
+}
+
+.faq-item .arrow {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.faq-item input:checked ~ label .arrow {
+    transform: rotate(90deg); 
+}
+
+.faq-item .faq-content {
+    max-height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+.faq-item input:checked ~ .faq-content {
+    max-height: 200px; 
+}
+
+.faq-content p {
+    margin: 15px 0;
+    color: #666;
+}
+
+.faq-item input:disabled:checked ~ .faq-content {
+    max-height: 200px;
+}
+
+.footer {
+    background: linear-gradient(to right, #0a3876, #0d1d38);
+    color: white;
+    padding: 40px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+}
+.newsletter input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.floating-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #004aad;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menu-container {
+    position: fixed;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    background: rgba(0, 74, 173, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    visibility: hidden;
+}
+.menu-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+.menu-container a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
