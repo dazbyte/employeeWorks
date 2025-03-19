@@ -1,5 +1,6 @@
 .navbar {
     background-color: rgb(255, 255, 255);
+    
 }
 .navbar-brand img {
     height: 60px;
@@ -8,10 +9,10 @@
 .navbar-nav .nav-link {
     font-weight: 600;
     color: #0a3876;
-    font-size: 20px;
+    font-size: 18px;
 }
 .navbar-nav .nav-link:hover {
-    color: paleturquoise;
+    color: rgb(236, 47, 47);
 }
 .hero-container{
     background-image:url('../Assets/VM-images/white-abstract-background-modern-circle-260nw-2474885867.webp');
@@ -126,6 +127,59 @@
     background: rgba(72, 112, 187, 0.3);
     color: rgb(255, 255, 255);
 }
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ebf0f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    color: #333;
+   
+}
+.underline {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: red;
+    margin: 5px auto;
+}
+.underline-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.underline-red {
+    width: 60px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+.underline-blue {
+    width: 100px;
+    height: 2px;
+    background-color: #0a3876;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+.underline-container:hover .underline-red {
+    width: 100px;
+    height: 2px;
+}
+.underline-container:hover .underline-blue {
+    width: 60px;
+    height: 2px;
+}
 .footer {
     background: linear-gradient(to right, #0a3876, #0d1d38);
     color: white;
@@ -146,30 +200,36 @@
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid white;
+    background:none;
+    margin: 10px 0px 10px 0px;
 }
 .floating-button {
     position: fixed;
-    right: 20px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: #004aad;
+    background: #0a3876;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    transition: background 0.3s ease;
     z-index: 1000;
 }
+
+.floating-button:hover {
+    background: rgb(3, 48, 107);
+}
+
 .menu-container {
     position: fixed;
-    right: 70px;
+    right: 90px; /* Keeps space between menu and button */
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(0.5);
+    transform-origin: right center;
     width: 300px;
     background: rgba(0, 74, 173, 0.8);
     color: white;
@@ -178,8 +238,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+.menu-container.show {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
 .menu-container a {
     display: flex;
     align-items: center;
@@ -187,10 +254,12 @@
     color: white;
     text-decoration: none;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.267);
     border-radius: 5px;
     text-align: center;
+    /* transition: background 0.3s ease; */
 }
+
 .menu-container a:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.192);
 }

@@ -3,6 +3,7 @@
 }
 .navbar {
     background-color: rgb(255, 255, 255);
+    
 }
 .navbar-brand img {
     height: 60px;
@@ -11,10 +12,10 @@
 .navbar-nav .nav-link {
     font-weight: 600;
     color: #0a3876;
-    font-size: 20px;
+    font-size: 18px;
 }
 .navbar-nav .nav-link:hover {
-    color: paleturquoise;
+    color: rgb(236, 47, 47);
 }
 .banner {
     width: 100%;
@@ -93,6 +94,53 @@
 .right .number {
     left: -40px;
 }
+.awards-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.awards-title {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.awards-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: red;
+    margin: 5px auto 0;
+}
+
+.award-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-image {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+#award-image4{
+    max-height: 300px;
+}
+
+.award-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .fav-container {
     max-width: 800px;
     margin: 50px auto;
@@ -186,26 +234,30 @@
 }
 .floating-button {
     position: fixed;
-    right: 20px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: #004aad;
+    background: rgba(0, 74, 173, 0.8);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    /* transition: background 0.3s ease; */
     z-index: 1000;
 }
+
+.floating-button:hover {
+    background: rgb(3, 48, 107);
+}
+
 .menu-container {
     position: fixed;
-    right: 70px;
+    right: 90px; /* Keeps space between menu and button */
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(0.5);
+    transform-origin: right center;
     width: 300px;
     background: rgba(0, 74, 173, 0.8);
     color: white;
@@ -214,8 +266,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+.menu-container.show {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
 .menu-container a {
     display: flex;
     align-items: center;
@@ -223,10 +282,12 @@
     color: white;
     text-decoration: none;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.267);
     border-radius: 5px;
     text-align: center;
+    /* transition: background 0.3s ease; */
 }
+
 .menu-container a:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.192);
 }
